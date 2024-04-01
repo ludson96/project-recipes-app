@@ -1,4 +1,4 @@
-# Repositório do projeto App de Receitas
+# Repositório do projeto App de Receitas 🍳
 
 # 🚧 Estilização em desenvolvimento ! 🚧
 
