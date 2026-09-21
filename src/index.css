@@ -24,6 +24,7 @@
 /* Mobile Frame Container for pages */
 .app-container {
   width: 100%;
+  min-height: 100%;
   flex: 1;
   background-color: #ffffff;
   position: relative;

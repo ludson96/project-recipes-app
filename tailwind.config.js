@@ -8,16 +8,16 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c',
-          500: '#f97316', // Primary Gourmet Orange
-          600: '#ea580c',
-          700: '#c2410c',
-          800: '#9a3412',
-          900: '#7c2d12',
+          50: '#f5f0fb',
+          100: '#ebdff7',
+          200: '#d9c2ef',
+          300: '#be99e3',
+          400: '#8958A3',
+          500: '#41197F', // Primary GourmetLab Purple
+          600: '#38156e',
+          700: '#2f115c',
+          800: '#260d4b',
+          900: '#1b0936',
         },
         dark: {
           surface: '#12161a',

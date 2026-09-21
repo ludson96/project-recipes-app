@@ -64,6 +64,7 @@ const Login: React.FC = () => {
               type="email"
               name="email"
               id="email"
+              aria-label="Email"
               data-testid="email-input"
               required
               placeholder="Email"
@@ -78,6 +79,7 @@ const Login: React.FC = () => {
               type="password"
               name="password"
               id="password"
+              aria-label="Senha"
               data-testid="password-input"
               required
               placeholder="Password"
