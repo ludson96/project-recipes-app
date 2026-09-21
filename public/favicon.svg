@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="gourmetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Fundo Circular com borda suave -->
+  <circle cx="32" cy="32" r="30" fill="url(#gourmetGrad)" />
+  
+  <!-- Cloche / Prato Gourmet com Toque de Coquetel -->
+  <g filter="url(#shadow)" fill="#FFFFFF">
+    <!-- Puxador do cloche -->
+    <circle cx="32" cy="18" r="3.5" />
+    
+    <!-- Cúpula do Cloche -->
+    <path d="M18 36 C18 24, 46 24, 46 36 Z" />
+    
+    <!-- Base / Prato -->
+    <rect x="14" y="38" width="36" height="4" rx="2" />
+    
+    <!-- Detalhes de brilho sutil -->
+    <path d="M22 28 C26 23, 30 22, 34 22" stroke="#FED7AA" stroke-width="2" stroke-linecap="round" fill="none" />
+    
+    <!-- Folha decorativa de manjericão/gourmet no topo -->
+    <path d="M32 14 C35 11, 38 12, 38 14 C38 16, 34 16, 32 14 Z" fill="#22C55E" />
+  </g>
+</svg>

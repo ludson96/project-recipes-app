@@ -1,25 +1,27 @@
 {
-  "extends": ["trybe-frontend"],
-  "overrides": [
-    {
-      "files": ["src/tests/**/*.js"],
-      "rules": {
-        "max-len": [
-          "error",
-          {
-            "code": 90,
-            "ignoreComments": true,
-            "ignoreUrls": true,
-            "ignoreRegExpLiterals": true,
-            "ignoreStrings": true
-          }
-        ],
-        "max-lines": [ "off" ],
-        "no-magic-numbers": ["off"]
-      }
-    }
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
-    "react/jsx-no-constructed-context-values": 0
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
   }
 }
