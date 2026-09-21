@@ -16,30 +16,34 @@ const Footer: React.FC = () => {
       <Link
         to="/drinks"
         className={`flex flex-col items-center gap-1 transition-all duration-200 ${
-          isDrinks ? 'text-brand-500 scale-105 font-bold' : 'text-stone-400 hover:text-stone-600'
+          isDrinks ? 'text-[#41197F] scale-105 font-bold' : 'text-stone-400 hover:text-stone-600'
         }`}
       >
-        <img
-          src={drinkIcon}
-          alt="Bebidas"
-          data-testid="drinks-bottom-btn"
-          className={`w-7 h-7 transition-transform ${isDrinks ? 'brightness-90 filter drop-shadow' : 'opacity-70'}`}
-        />
+        <div className={`p-1.5 rounded-2xl transition-all ${isDrinks ? 'bg-[#41197F]/10 shadow-xs ring-2 ring-[#41197F]/20' : ''}`}>
+          <img
+            src={drinkIcon}
+            alt="Bebidas"
+            data-testid="drinks-bottom-btn"
+            className={`w-6 h-6 transition-transform ${isDrinks ? 'scale-110 filter drop-shadow' : 'opacity-60'}`}
+          />
+        </div>
         <span className="text-[11px] uppercase tracking-wider font-semibold">Drinks</span>
       </Link>
 
       <Link
         to="/meals"
         className={`flex flex-col items-center gap-1 transition-all duration-200 ${
-          isMeals ? 'text-brand-500 scale-105 font-bold' : 'text-stone-400 hover:text-stone-600'
+          isMeals ? 'text-[#41197F] scale-105 font-bold' : 'text-stone-400 hover:text-stone-600'
         }`}
       >
-        <img
-          src={mealIcon}
-          alt="Comidas"
-          data-testid="meals-bottom-btn"
-          className={`w-7 h-7 transition-transform ${isMeals ? 'brightness-90 filter drop-shadow' : 'opacity-70'}`}
-        />
+        <div className={`p-1.5 rounded-2xl transition-all ${isMeals ? 'bg-[#41197F]/10 shadow-xs ring-2 ring-[#41197F]/20' : ''}`}>
+          <img
+            src={mealIcon}
+            alt="Comidas"
+            data-testid="meals-bottom-btn"
+            className={`w-7 h-7 transition-transform ${isMeals ? 'scale-110 filter drop-shadow' : 'opacity-60'}`}
+          />
+        </div>
         <span className="text-[11px] uppercase tracking-wider font-semibold">Meals</span>
       </Link>
     </footer>
