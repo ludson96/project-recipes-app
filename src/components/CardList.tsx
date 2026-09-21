@@ -4,6 +4,8 @@ import RecipesContext from '../context/RecipesContext';
 import { Meal, Drink } from '../types/recipe';
 import { FiClock, FiChevronRight } from 'react-icons/fi';
 
+import LoadingScreen from './LoadingScreen';
+
 const CardList: React.FC = () => {
   const {
     filtredMeals,
@@ -43,13 +45,7 @@ const CardList: React.FC = () => {
   }, [filtredMeals, filtredDrinks, pathname, history]);
 
   if (isLoading) {
-    return (
-      <div className="p-4 grid grid-cols-2 gap-3.5 animate-pulse">
-        {Array.from({ length: 6 }).map((_, idx) => (
-          <div key={idx} className="bg-stone-200/60 h-52 rounded-2xl" />
-        ))}
-      </div>
-    );
+    return <LoadingScreen message="Buscando receitas..." />;
   }
 
   const isMealsPage = pathname === '/meals';

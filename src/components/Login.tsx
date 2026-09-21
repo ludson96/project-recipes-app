@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { FiMail, FiLock, FiArrowRight } from 'react-icons/fi';
+import { FiMail, FiLock, FiLogIn } from 'react-icons/fi';
+import logo from '../images/gourmetLabLogo.svg';
 
 const Login: React.FC = () => {
   const history = useHistory();
@@ -32,70 +33,66 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-stone-900 flex flex-col justify-between p-6 relative overflow-hidden text-white">
-      {/* Background Decorativo */}
-      <div className="absolute top-0 right-0 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-600/10 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
-
-      {/* Header com Logo */}
-      <div className="relative z-10 pt-8 flex flex-col items-center text-center">
-        <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-600 to-brand-400 p-0.5 shadow-xl shadow-brand-500/20 mb-4 flex items-center justify-center">
-          <div className="w-full h-full bg-stone-900/40 rounded-2xl backdrop-blur-xs flex items-center justify-center text-3xl">
-            🍳
-          </div>
+    <div className="flex-1 flex flex-col justify-center items-center p-4 min-h-full bg-culinary-watermark relative select-none">
+      {/* Card Flutuante de Login idêntico ao project-delivery-app */}
+      <div className="w-full bg-white/95 backdrop-blur-md border border-slate-200 rounded-3xl p-6 shadow-xl my-auto">
+        
+        {/* Brand com Logo Central */}
+        <div className="text-center mb-5 flex flex-col items-center">
+          <img
+            src={logo}
+            alt="GourmetLab Logo"
+            className="h-24 w-auto mx-auto object-contain mb-1.5 hover:scale-105 transition-transform drop-shadow-md"
+          />
+          <p className="text-[11px] text-slate-500 font-medium">
+            Receitas e bebidas selecionadas na velocidade da luz
+          </p>
         </div>
-        <h1 className="text-2xl font-black tracking-tight text-white">
-          Gourmet<span className="text-brand-500">Lab</span>
-        </h1>
-        <p className="text-stone-400 text-xs mt-1">
-          Explore o universo de pratos e coquetéis selecionados
-        </p>
-      </div>
 
-      {/* Card de Login */}
-      <div className="relative z-10 w-full max-w-sm mx-auto bg-stone-800/80 backdrop-blur-xl p-6 rounded-3xl border border-stone-700/60 shadow-2xl">
-        <h2 className="text-lg font-bold text-white mb-1">Boas-vindas!</h2>
-        <p className="text-stone-400 text-xs mb-6">Entre para salvar seus pratos e acompanhar receitas.</p>
-
+        {/* Formulário com labels e inputs idênticos ao project-delivery-app */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="email" className="block text-xs font-semibold text-stone-300 mb-1.5">
-              Email
+            <label
+              htmlFor="email"
+              className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
+            >
+              E-mail
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-stone-400">
-                <FiMail className="w-4 h-4" />
-              </div>
+              <FiMail className="absolute left-3.5 top-3.5 text-slate-400 w-4 h-4 pointer-events-none" />
               <input
                 type="email"
                 name="email"
                 id="email"
                 data-testid="email-input"
+                required
                 placeholder="seu.email@exemplo.com"
                 value={email}
                 onChange={handleChange}
-                className="w-full pl-10 pr-3 py-2.5 bg-stone-900/70 border border-stone-700 rounded-xl text-sm text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-500 transition-all"
+                className="w-full bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-xl pl-10 pr-3.5 py-3 focus:border-[#41197F] focus:outline-none focus:ring-2 focus:ring-[#FCC436] transition-all"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-xs font-semibold text-stone-300 mb-1.5">
+            <label
+              htmlFor="password"
+              className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
+            >
               Senha
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-stone-400">
-                <FiLock className="w-4 h-4" />
-              </div>
+              <FiLock className="absolute left-3.5 top-3.5 text-slate-400 w-4 h-4 pointer-events-none" />
               <input
                 type="password"
                 name="password"
                 id="password"
                 data-testid="password-input"
+                required
                 placeholder="••••••••"
                 value={password}
                 onChange={handleChange}
-                className="w-full pl-10 pr-3 py-2.5 bg-stone-900/70 border border-stone-700 rounded-xl text-sm text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-500 transition-all"
+                className="w-full bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-xl pl-10 pr-3.5 py-3 focus:border-[#41197F] focus:outline-none focus:ring-2 focus:ring-[#FCC436] transition-all"
               />
             </div>
           </div>
@@ -104,23 +101,21 @@ const Login: React.FC = () => {
             type="submit"
             data-testid="login-submit-btn"
             disabled={isDisabled}
-            className={`w-full mt-2 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-200 shadow-md ${
-              isDisabled
-                ? 'bg-stone-700/60 text-stone-400 cursor-not-allowed'
-                : 'bg-brand-500 hover:bg-brand-600 active:scale-98 text-white shadow-brand-500/25 hover:shadow-lg'
-            }`}
+            className="w-full mt-2 flex items-center justify-center space-x-2 bg-[#192A56] hover:bg-[#121e3f] disabled:opacity-50 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition-all cursor-pointer active:scale-99"
           >
-            <span>Acessar Receitas</span>
-            <FiArrowRight className="w-4 h-4" />
+            <FiLogIn className="w-5 h-5 text-[#FDEB37]" />
+            <span>Entrar</span>
           </button>
         </form>
-      </div>
 
-      {/* Footer discreto */}
-      <div className="relative z-10 text-center pb-4">
-        <p className="text-[11px] text-stone-500">
-          GourmetLab Portfolio Project • TypeScript & React
-        </p>
+        <div className="mt-6 pt-5 border-t border-slate-200 text-center">
+          <p className="text-xs text-slate-600">
+            Ainda não tem uma conta?{' '}
+            <span className="text-[#192A56] hover:underline font-bold cursor-pointer">
+              Cadastre-se agora
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );

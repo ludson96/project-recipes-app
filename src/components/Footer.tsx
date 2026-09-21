@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
   return (
     <footer
       data-testid="footer"
-      className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] bg-white/95 backdrop-blur-md border-t border-stone-200/80 px-6 py-3 z-40 shadow-lg flex justify-around items-center"
+      className="sticky bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-stone-200/80 px-6 py-2.5 z-40 shadow-lg flex justify-around items-center"
     >
       <Link
         to="/drinks"

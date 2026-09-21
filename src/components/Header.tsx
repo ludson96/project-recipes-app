@@ -4,6 +4,7 @@ import imageProfile from '../images/profileIcon.svg';
 import imageSearch from '../images/searchIcon.svg';
 import FilterButton from './FilterButton';
 import SearchBar from './SearchBar';
+import AppLogo from './AppLogo';
 
 interface HeaderProps {
   title?: string;
@@ -41,7 +42,10 @@ const Header: React.FC<HeaderProps> = ({ title, showSearch = true }) => {
         </Link>
 
         <div className="flex flex-col items-center">
-          <span className="text-[10px] uppercase font-bold tracking-widest text-brand-500">GourmetLab</span>
+          <div className="flex items-center gap-1">
+            <AppLogo className="w-4 h-4" />
+            <span className="text-[10px] uppercase font-bold tracking-widest text-brand-500">GourmetLab</span>
+          </div>
           <h1 data-testid="page-title" className="text-base font-extrabold text-stone-800">
             {getPageTitle()}
           </h1>
