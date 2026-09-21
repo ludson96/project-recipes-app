@@ -20,7 +20,7 @@ interface Props {
 }
 
 const TWELVE = 12;
-const slicer = <T,>(arr: T[]): T[] => arr.slice(0, TWELVE);
+const slicer = <T,>(arr: T[] | null | undefined): T[] => (Array.isArray(arr) ? arr.slice(0, TWELVE) : []);
 
 const RecipesProvider: React.FC<Props> = ({ children }) => {
   const [filtredMeals, setFiltredMeals] = useState<Meal[]>([]);

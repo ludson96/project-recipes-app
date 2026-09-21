@@ -23,15 +23,15 @@ const CardList: React.FC = () => {
   const { pathname } = location;
 
   const getVisibleMeals = (): Meal[] => {
-    if (categoryFilter && filtredCategoryMeals.length > 0) return filtredCategoryMeals;
-    if (filtredMeals.length > 0) return filtredMeals;
-    return initialMeals;
+    if (categoryFilter && Array.isArray(filtredCategoryMeals) && filtredCategoryMeals.length > 0) return filtredCategoryMeals;
+    if (Array.isArray(filtredMeals) && filtredMeals.length > 0) return filtredMeals;
+    return Array.isArray(initialMeals) ? initialMeals : [];
   };
 
   const getVisibleDrinks = (): Drink[] => {
-    if (categoryFilter && filtredCategoryDrinks.length > 0) return filtredCategoryDrinks;
-    if (filtredDrinks.length > 0) return filtredDrinks;
-    return initialDrinks;
+    if (categoryFilter && Array.isArray(filtredCategoryDrinks) && filtredCategoryDrinks.length > 0) return filtredCategoryDrinks;
+    if (Array.isArray(filtredDrinks) && filtredDrinks.length > 0) return filtredDrinks;
+    return Array.isArray(initialDrinks) ? initialDrinks : [];
   };
 
   // Se pesquisa direta retornar exatamente 1 resultado, redireciona para detalhes (mantendo comportamento original)

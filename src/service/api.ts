@@ -49,28 +49,35 @@ export const fetchButtonMealsCategory = async (): Promise<CategoryItem[]> => {
 // =================== DRINKS API ===================
 
 export const fetchInitialDrinks = async (): Promise<Drink[]> => {
-  const { data } = await drinksClient.get<{ drinks: Drink[] | null }>('/search.php?s=');
-  return data.drinks || [];
+  try {
+    const { data } = await drinksClient.get<{ drinks: Drink[] | string | null }>('/search.php?s=');
+    if (Array.isArray(data.drinks)) return data.drinks;
+    // Fallback: se search.php?s= retornar 'no data found', busca alfabeticamente
+    const fallback = await drinksClient.get<{ drinks: Drink[] | null }>('/search.php?f=a');
+    return Array.isArray(fallback.data.drinks) ? fallback.data.drinks : [];
+  } catch {
+    return [];
+  }
 };
 
 export const fetchDrinksByIngredient = async (ingredient: string): Promise<Drink[]> => {
   const { data } = await drinksClient.get<{ drinks: Drink[] | null }>(`/filter.php?i=${encodeURIComponent(ingredient)}`);
-  return data.drinks || [];
+  return Array.isArray(data.drinks) ? data.drinks : [];
 };
 
 export const fetchDrinksByName = async (name: string): Promise<Drink[]> => {
-  const { data } = await drinksClient.get<{ drinks: Drink[] | null }>(`/search.php?s=${encodeURIComponent(name)}`);
-  return data.drinks || [];
+  const { data } = await drinksClient.get<{ drinks: Drink[] | string | null }>(`/search.php?s=${encodeURIComponent(name)}`);
+  return Array.isArray(data.drinks) ? data.drinks : [];
 };
 
 export const fetchDrinksByFirstLetter = async (letter: string): Promise<Drink[]> => {
   const { data } = await drinksClient.get<{ drinks: Drink[] | null }>(`/search.php?f=${encodeURIComponent(letter)}`);
-  return data.drinks || [];
+  return Array.isArray(data.drinks) ? data.drinks : [];
 };
 
 export const fetchDrinksCategory = async (category: string): Promise<Drink[]> => {
   const { data } = await drinksClient.get<{ drinks: Drink[] | null }>(`/filter.php?c=${encodeURIComponent(category)}`);
-  return data.drinks || [];
+  return Array.isArray(data.drinks) ? data.drinks : [];
 };
 
 export const fetchDrinkRecipeById = async (id: string): Promise<Drink | null> => {

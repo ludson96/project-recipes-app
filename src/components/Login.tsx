@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { FiMail, FiLock, FiLogIn } from 'react-icons/fi';
 import logo from '../images/gourmetLabLogo.svg';
+import tomate from '../images/tomate.svg';
 
 const Login: React.FC = () => {
   const history = useHistory();
@@ -33,86 +33,75 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 flex flex-col justify-center items-center p-4 min-h-full bg-culinary-watermark relative select-none">
-      {/* Card Flutuante de Login idêntico ao project-delivery-app */}
-      <div className="w-full bg-white/95 backdrop-blur-md border border-slate-200 rounded-3xl p-6 shadow-xl my-auto">
-        
-        {/* Brand com Logo Central */}
-        <div className="text-center mb-5 flex flex-col items-center">
+    <div className="w-full min-h-full flex-1 flex flex-col justify-between items-center relative select-none bg-white">
+      <div className="relative w-full h-[360px] bg-[#41197F] flex flex-col items-center justify-start overflow-visible shrink-0">
+        <div className="relative z-10 pt-[90px] flex flex-col items-center">
           <img
             src={logo}
             alt="GourmetLab Logo"
-            className="h-24 w-auto mx-auto object-contain mb-1.5 hover:scale-105 transition-transform drop-shadow-md"
+            className="w-[200px] h-auto object-contain drop-shadow-md"
           />
-          <p className="text-[11px] text-slate-500 font-medium">
-            Receitas e bebidas selecionadas na velocidade da luz
-          </p>
         </div>
 
-        {/* Formulário com labels e inputs idênticos ao project-delivery-app */}
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
-            >
-              E-mail
-            </label>
-            <div className="relative">
-              <FiMail className="absolute left-3.5 top-3.5 text-slate-400 w-4 h-4 pointer-events-none" />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                data-testid="email-input"
-                required
-                placeholder="seu.email@exemplo.com"
-                value={email}
-                onChange={handleChange}
-                className="w-full bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-xl pl-10 pr-3.5 py-3 focus:border-[#41197F] focus:outline-none focus:ring-2 focus:ring-[#FCC436] transition-all"
-              />
-            </div>
+        <div className="absolute -bottom-[160px] left-0 right-0 z-20 flex justify-center -translate-x-[6px] pointer-events-none">
+          <img
+            src={tomate}
+            alt="Tomates frescos"
+            className="w-full max-w-[370px] h-auto object-contain drop-shadow-lg"
+          />
+        </div>
+      </div>
+
+      {/* Formulário e Título "LOGIN" */}
+      <div className="w-full px-8 pt-16 pb-8 flex-1 flex flex-col justify-center z-10">
+        <h2 className="text-center text-xl font-bold italic tracking-widest text-[#41197F] uppercase mb-5">
+          Login
+        </h2>
+
+        <form onSubmit={handleSubmit} className="w-full space-y-3">
+          <div className="relative">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              data-testid="email-input"
+              required
+              placeholder="Email"
+              value={email}
+              onChange={handleChange}
+              className="w-full bg-white border border-[#41197F]/40 text-slate-800 text-sm rounded-lg px-4 py-3 placeholder:text-slate-400 focus:border-[#41197F] focus:outline-none focus:ring-1 focus:ring-[#41197F] transition-all"
+            />
           </div>
 
-          <div>
-            <label
-              htmlFor="password"
-              className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
-            >
-              Senha
-            </label>
-            <div className="relative">
-              <FiLock className="absolute left-3.5 top-3.5 text-slate-400 w-4 h-4 pointer-events-none" />
-              <input
-                type="password"
-                name="password"
-                id="password"
-                data-testid="password-input"
-                required
-                placeholder="••••••••"
-                value={password}
-                onChange={handleChange}
-                className="w-full bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-xl pl-10 pr-3.5 py-3 focus:border-[#41197F] focus:outline-none focus:ring-2 focus:ring-[#FCC436] transition-all"
-              />
-            </div>
+          <div className="relative">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              data-testid="password-input"
+              required
+              placeholder="Password"
+              value={password}
+              onChange={handleChange}
+              className="w-full bg-white border border-[#41197F]/40 text-slate-800 text-sm rounded-lg px-4 py-3 placeholder:text-slate-400 focus:border-[#41197F] focus:outline-none focus:ring-1 focus:ring-[#41197F] transition-all"
+            />
           </div>
 
           <button
             type="submit"
             data-testid="login-submit-btn"
             disabled={isDisabled}
-            className="w-full mt-2 flex items-center justify-center space-x-2 bg-[#192A56] hover:bg-[#121e3f] disabled:opacity-50 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition-all cursor-pointer active:scale-99"
+            className="w-full mt-3 bg-[#FCC436] hover:bg-[#eab327] disabled:opacity-50 text-white font-extrabold py-3.5 rounded-lg shadow-md uppercase tracking-wider text-sm transition-all cursor-pointer active:scale-[0.99]"
           >
-            <FiLogIn className="w-5 h-5 text-[#FDEB37]" />
-            <span>Entrar</span>
+            Enter
           </button>
         </form>
 
-        <div className="mt-6 pt-5 border-t border-slate-200 text-center">
-          <p className="text-xs text-slate-600">
+        <div className="mt-4 text-center">
+          <p className="text-xs text-slate-500">
             Ainda não tem uma conta?{' '}
-            <span className="text-[#192A56] hover:underline font-bold cursor-pointer">
-              Cadastre-se agora
+            <span className="text-[#41197F] hover:underline font-bold cursor-pointer">
+              Cadastre-se
             </span>
           </p>
         </div>
