@@ -12,7 +12,7 @@
 
 **GourmetLab** is a cutting-edge mobile-first web application designed for global culinary and cocktail exploration. Built with scalable component architecture, asynchronous consumption of the public **TheMealDB** and **TheCocktailDB** APIs, reactive centralized state management via React Context API, and a visual experience simulating a real smartphone with status bar, dynamic island, and ergonomic navigation.
 
-📌 Quick Navigation
+## 📌 Quick Navigation
 
 - [📝 About the Project](#-about-the-project)
 - [🖼️ Preview](#️-preview)
@@ -26,22 +26,22 @@
 - [🚀 Getting Started](#-getting-started)
 - [📄 License](#-license)
 
-📝 About the Project
+## 📝 About the Project
 
 **GourmetLab** was crafted to turn the cooking and mixology experience into an intuitive, elegant, and practical journey. With an uncompromising mobile-first design philosophy, the app presents a device-enclosed smartphone container featuring a distinctive `#41197F` primary purple identity and `#FCC436` golden accents.
 
 The platform provides complete culinary lifecycle support: ingredient and title searches, quick category filtering, interactive step-by-step progress checklists stored locally, persistent favorites collection, and one-click clipboard link sharing.
 
-🖼️ Preview
+## 🖼️ Preview
 
-  <img src="./docs/images/projeto.gif" alt="App Demonstration" />
+<img src="./docs/images/projeto.gif" alt="App Demonstration" />
 
-🌐 Live Deployment
+## 🌐 Live Deployment
 
 Access the production application:
-👉 **[GourmetLab on Vercel](https://gourmetlab-gamma.vercel.app/)**
+👉 **[GourmetLab](https://gourmetlab-gamma.vercel.app/)**
 
-⚡ API Endpoints
+## ⚡ API Endpoints
 
 The application consumes two reliable, public culinary databases via customized **Axios** HTTP client instances:
 
@@ -61,7 +61,7 @@ The application consumes two reliable, public culinary databases via customized 
 - `GET /lookup.php?i={id}` — Full cocktail preparation guide and glass recommendations.
 - `GET /list.php?c=list` — Drink categories list for horizontal filter buttons.
 
-✨ Features
+## ✨ Features
 
 - 📱 **Realistic Smartphone Mockup Frame:** Clean mobile frame with dynamic pill camera (Dynamic Island), system status bar, and bottom home indicator bar.
 - 🔐 **Authentication & Live Form Validation:** Email format and password length validation with real-time feedback and session persistence in `localStorage`.
@@ -73,7 +73,7 @@ The application consumes two reliable, public culinary databases via customized 
 - 📜 **Done Recipes & Favorites Collections:** Filterable tabs (All, Food, Drinks) to browse and manage completed or saved recipes.
 - 👤 **User Profile Hub:** User information, quick action navigation links, and seamless Logout.
 
-🛠️ Technologies and Tools
+## 🛠️ Technologies and Tools
 
 | Layer / Purpose | Technology | Description |
 | :--- | :--- | :--- |
@@ -88,7 +88,7 @@ The application consumes two reliable, public culinary databases via customized 
 | **Automated Testing** | **Vitest 2.1 & Testing Library** | Unit, integration, and routing test suites |
 | **Code Quality** | **ESLint 8.57 & TypeScript ESLint** | Zero-warning linting configuration and consistent code style |
 
-🏛️ Solution Architecture
+## 🏛️ Solution Architecture
 
 ```mermaid
 graph TD
@@ -132,7 +132,7 @@ graph TD
     API --> DRINK_API
 ```
 
-📁 Repository Structure
+## 📁 Repository Structure
 
 ```text
 project-recipes-app/
@@ -178,7 +178,7 @@ project-recipes-app/
 └── vite.config.ts           # Vite build pipeline and plugin setup
 ```
 
-💡 Technical Decisions
+## 💡 Technical Decisions
 
 - **Design System Centered on `#41197F`:** The visual identity was completely unified around `#41197F` as the primary brand purple, complemented by golden `#FCC436` accents for calls-to-action, establishing high-end aesthetic contrast.
 - **Mobile Smartphone Isolation:** The application is framed within `PhoneFrame`, ensuring that even on ultra-wide desktop monitors, the user experiences proportions and ergonomics identical to a flagship modern smartphone.
@@ -186,7 +186,7 @@ project-recipes-app/
 - **TypeScript Strict Mode:** Full end-to-end static typing eliminating `any`, empowering precision autocomplete, long-term maintainability, and compile-time safety.
 - **Modern Testing with Vitest and Testing Library:** Migrated legacy test setups to Vitest natively integrated with Vite, delivering fast test execution with coverage of critical navigation and user flows.
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 - **Node.js** version `18.x` or higher
@@ -225,11 +225,9 @@ project-recipes-app/
    npm run lint
    ```
 
-📄 License
-
-This project is licensed under the **MIT License**. See the `LICENSE` file for further details.
+## 📄 Licença
 
 <div align="center">
-  Developed by <strong>Ludson Pereira dos Santos</strong> 🚀<br />
-  <a href="https://www.linkedin.com/in/ludson96/">LinkedIn</a> • <a href="https://github.com/ludson96">GitHub</a> • <a href="mailto:ludson_ps27@hotmail.com">Email</a>
+  Desenvolvido por <strong>Ludson Pereira dos Santos</strong> 🚀<br />
+  <a href="https://www.linkedin.com/in/ludson96/">LinkedIn</a> • <a href="https://github.com/ludson96">GitHub</a> • <a href="mailto:ludson_ps27@hotmail.com">E-mail</a>
 </div>

@@ -12,7 +12,7 @@
 
 O **GourmetLab** é uma aplicação web mobile-first de ponta voltada à exploração gastronômica e coquetelaria mundial. Construído com arquitetura de componentes escalável, consumo assíncrono das APIs abertas **TheMealDB** e **TheCocktailDB**, estado centralizado reativo com React Context API e uma experiência visual que simula um dispositivo smartphone real com status bar, dynamic island e navegação ergonômica.
 
-📌 Navegação Rápida
+## 📌 Navegação Rápida
 
 - [📝 Sobre o Projeto](#-sobre-o-projeto)
 - [🖼️ Preview](#️-preview)
@@ -26,22 +26,22 @@ O **GourmetLab** é uma aplicação web mobile-first de ponta voltada à explora
 - [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
 - [📄 Licença](#-licença)
 
-📝 Sobre o Projeto
+## 📝 Sobre o Projeto
 
 O **GourmetLab** foi desenvolvido para transformar a experiência de cozinhar e preparar drinks em uma jornada intuitiva, elegante e prática. A aplicação opera com foco absoluto em usabilidade mobile, apresentando layout contido em moldura de smartphone de alta definição com design system fundamentado na cor primária `#41197F` e detalhes em dourado `#FCC436`.
 
 O projeto oferece suporte completo ao ciclo culinário: descoberta por ingredientes ou nomes, filtragem rápida por categorias clássicas, acompanhamento do preparo com checklist interativo passo a passo salvo no navegador, sistema de favoritos persistente e compartilhamento instantâneo via área de transferência.
 
-🖼️ Preview
+## 🖼️ Preview
 
-  <img src="./docs/images/projeto.gif" alt="Demonstração do App" />
+<img src="./docs/images/projeto.gif" alt="Demonstração do App" />
 
-🌐 Deploy da Aplicação
+## 🌐 Deploy da Aplicação
 
 Acesse a aplicação em produção:
-👉 **[GourmetLab na Vercel](https://gourmetlab-gamma.vercel.app/)**
+👉 **[GourmetLab](https://gourmetlab-gamma.vercel.app/)**
 
-⚡ API Endpoints
+## ⚡ API Endpoints
 
 A aplicação consome duas bases de dados gastronômicas abertas de alta disponibilidade via instâncias especializadas do **Axios**:
 
@@ -61,7 +61,7 @@ A aplicação consome duas bases de dados gastronômicas abertas de alta disponi
 - `GET /lookup.php?i={id}` — Detalhes do coquetel com modo de preparo e copos recomendados.
 - `GET /list.php?c=list` — Relação de categorias para botões de filtro.
 
-✨ Funcionalidades
+## ✨ Funcionalidades
 
 - 📱 **Simulação de Smartphone Realista:** Moldura com câmera dinâmica em pílula (Dynamic Island), barra de status do sistema e indicador de navegação inferior.
 - 🔐 **Autenticação Simples & Validação em Tempo Real:** Validação de e-mail e senha mínima com feedback visual e persistência dos dados de sessão no `localStorage`.
@@ -73,7 +73,7 @@ A aplicação consome duas bases de dados gastronômicas abertas de alta disponi
 - 📜 **Histórico de Receitas Feitas e Favoritas:** Abas com filtros por tipo (Todas, Comidas, Bebidas) para gerenciar facilmente o acervo pessoal.
 - 👤 **Área de Perfil:** Informações do usuário logado, atalhos rápidos e ação de encerramento de sessão (Logout).
 
-🛠️ Tecnologias e Ferramentas Utilizadas
+## 🛠️ Tecnologias e Ferramentas Utilizadas
 
 | Camada / Finalidade | Tecnologia | Descrição |
 | :--- | :--- | :--- |
@@ -88,7 +88,7 @@ A aplicação consome duas bases de dados gastronômicas abertas de alta disponi
 | **Testes Automatizados** | **Vitest 2.1 & Testing Library** | Bateria de testes de componentes, rotas e integração |
 | **Padronização de Código** | **ESLint 8.57 & TypeScript ESLint** | Regras de qualidade de código sem warnings e tipagem limpa |
 
-🏛️ Arquitetura da Solução
+## 🏛️ Arquitetura da Solução
 
 ```mermaid
 graph TD
@@ -132,7 +132,7 @@ graph TD
     API --> DRINK_API
 ```
 
-📁 Estrutura do Repositório
+## 📁 Estrutura do Repositório
 
 ```text
 project-recipes-app/
@@ -178,7 +178,7 @@ project-recipes-app/
 └── vite.config.ts           # Configuração de build e plugins do Vite
 ```
 
-💡 Decisões Técnicas
+## 💡 Decisões Técnicas
 
 - **Design System Centrado em `#41197F`:** A identidade visual foi totalmente consolidada em torno do roxo primário `#41197F`, acompanhado por tons dourados `#FCC436` para ações e destaques, gerando contraste premium e refinado.
 - **Isolamento em Moldura Mobile:** A experiência foi configurada através do `PhoneFrame`, garantindo que mesmo ao ser visualizada em telas desktop ultra-wide, a aplicação preserve proporções idênticas às de um aparelho móvel topo de linha.
@@ -186,7 +186,7 @@ project-recipes-app/
 - **TypeScript Strict:** Tipagem estática integral eliminando o uso de `any`, garantindo auto-complete preciso, manutenibilidade a longo prazo e segurança em tempo de compilação.
 - **Testes com Vitest e Testing Library:** Substituição do runner legado pelo Vitest integrado ao ecossistema Vite, alcançando execução ágil de testes unitários e de integração com cobertura das rotas críticas.
 
-🚀 Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 
 ### Pré-requisitos
 - **Node.js** na versão `18.x` ou superior
@@ -225,9 +225,7 @@ project-recipes-app/
    npm run lint
    ```
 
-📄 Licença
-
-Este projeto está sob a licença **MIT**. Consulte o arquivo `LICENSE` para obter mais detalhes.
+## 📄 Licença
 
 <div align="center">
   Desenvolvido por <strong>Ludson Pereira dos Santos</strong> 🚀<br />
