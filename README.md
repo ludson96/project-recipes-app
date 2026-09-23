@@ -16,6 +16,7 @@ O **GourmetLab** é uma aplicação web mobile-first de ponta voltada à explora
 
 - [📝 Sobre o Projeto](#-sobre-o-projeto)
 - [🖼️ Preview](#️-preview)
+- [📱 Aplicativo Mobile (Flutter)](#-aplicativo-mobile-flutter)
 - [🌐 Deploy da Aplicação](#-deploy-da-aplicação)
 - [⚡ API Endpoints](#-api-endpoints)
 - [✨ Funcionalidades](#-funcionalidades)
@@ -35,6 +36,12 @@ O projeto oferece suporte completo ao ciclo culinário: descoberta por ingredien
 ## 🖼️ Preview
 
 <img src="./docs/images/projeto.gif" alt="Demonstração do App" />
+
+## 📱 Aplicativo Mobile (Flutter)
+
+Além desta versão Web, este ecossistema conta com um **aplicativo mobile 100% nativo desenvolvido em Flutter** para Android e iOS, trazendo gerenciamento de estado e injeção de dependências com Riverpod, consumo assíncrono das APIs TheMealDB e TheCocktailDB, modo interativo de preparo passo a passo (checklist persistente), carrossel de recomendações gastronômicas cruzadas e feedback tátil por vibração nativa:
+
+👉 Repositório do App Mobile: [**ludson96/recipes-app**](https://github.com/ludson96/recipes-app)
 
 ## 🌐 Deploy da Aplicação
 

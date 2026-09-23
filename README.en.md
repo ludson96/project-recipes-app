@@ -16,6 +16,7 @@
 
 - [📝 About the Project](#-about-the-project)
 - [🖼️ Preview](#️-preview)
+- [📱 Mobile App (Flutter)](#-mobile-app-flutter)
 - [🌐 Live Deployment](#-live-deployment)
 - [⚡ API Endpoints](#-api-endpoints)
 - [✨ Features](#-features)
@@ -35,6 +36,12 @@ The platform provides complete culinary lifecycle support: ingredient and title 
 ## 🖼️ Preview
 
 <img src="./docs/images/projeto.gif" alt="App Demonstration" />
+
+## 📱 Mobile Application (Flutter)
+
+In addition to this Web version, this ecosystem features a **100% native mobile app built with Flutter** for Android and iOS, delivering state management and dependency injection with Riverpod, asynchronous consumption of TheMealDB & TheCocktailDB APIs, an interactive step-by-step cooking mode (persistent checklist), cross-gastronomic recommendation carousels, and native haptic vibration feedback:
+
+👉 Mobile App Repository: [**ludson96/recipes-app**](https://github.com/ludson96/recipes-app)
 
 ## 🌐 Live Deployment
 
